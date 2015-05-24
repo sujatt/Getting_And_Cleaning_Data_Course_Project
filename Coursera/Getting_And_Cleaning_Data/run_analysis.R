@@ -11,7 +11,7 @@ unzip(zipfile=filename1) 		# If it already exists, just unzip it
 					# If it does not already exist, download and unzip it
        fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
         download.file(fileURL,"proj3.zip",method="curl")
-        unzip(zip.file="proj3.zip")
+        unzip("proj3.zip")
         }                           
 
 
