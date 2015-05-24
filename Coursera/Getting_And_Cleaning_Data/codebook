@@ -1,0 +1,27 @@
+# CodeBook for the tidy dataset
+=============================
+
+This codebook describes, in brief, the dataset that was used by me for the project for the Coursera course "Getting and Cleaning Data".
+
+The data are available at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones, and a description of the project is provided at
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
+
+In short, the data set contains information on 30 volunteers who performed six activities (including walking, sitting, standing) while wearing 
+a smartphone on their wrist. Using the accelerometer and gyroscope embedded in the phone, various motion and other related parameters
+were captured.
+The data set comes with the following information for a training as well as a testing data set: a list of all the features captured
+by the phone and the activities (of the 6) that the subject was performing.
+
+Of the 561 features in total, those that pertained to the averages and variances of each of these parameters (mean and standard deviations)
+were analysed, and the tidier data set that ensues summarizes the averages over these variables by subject and activity label.
+As a result, the size of the data set is greatly reduced.
+
+## Variable names 
+----------
+The reduced dataset was created using the regular expression to filter out variables that reporeted the mean and std of 
+the original feature set.
+Parentheses were removed from old feature names; for example, "tBodyAcc-std()-Z" is now "tBodyAccStdZ".
+This hopefully makes the variable names much easier to manipulate for analysis.
+
+More details of the actual analysis process can be found in the R script in this repository:
+https://github.com/sujatt/Getting_And_Cleaning_Data_Course_Project/blob/master/Coursera/Getting_And_Cleaning_Data/run_analysis.R
